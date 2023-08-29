@@ -1,5 +1,6 @@
 import 'package:bank_sha/ui/pages/onboarding_page.dart';
 import 'package:bank_sha/ui/pages/sign_in_page.dart';
+import 'package:bank_sha/ui/pages/sign_up_page.dart';
 import 'package:bank_sha/ui/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashPage(),
         '/onboarding': (context) => const OnboardingPage(),
-        '/sign-in': (context) => const SignInPage()
+        '/sign-in': (context) => const SignInPage(),
+        '/sign-up': (context) => const SignUpPage()
       },
     );
   }

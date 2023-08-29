@@ -1,10 +1,11 @@
-import 'package:bank_sha/shared/theme.dart';
-import 'package:bank_sha/ui/widgets/button.dart';
-import 'package:bank_sha/ui/widgets/forms.dart';
 import 'package:flutter/material.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+import '../../shared/theme.dart';
+import '../widgets/button.dart';
+import '../widgets/forms.dart';
+
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +17,16 @@ class SignInPage extends StatelessWidget {
           Container(
             width: 155,
             height: 50,
-            margin: const EdgeInsets.only(top: 100),
+            margin: const EdgeInsets.only(top: 80),
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/img_logo_dark.png'))),
           ),
           const SizedBox(
-            height: 100,
+            height: 50,
           ),
           Text(
-            'Sign In &\nGrow Your Finance',
+            'Join Us to Unlock\nYour Growth',
             style: blackTextStyle.copyWith(fontSize: 20, fontWeight: semibold),
           ),
           const SizedBox(
@@ -40,35 +41,24 @@ class SignInPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const CustomFormField(title: 'Full Name'),
+                const SizedBox(
+                  height: 16,
+                ),
                 const CustomFormField(title: 'Email Address'),
                 const SizedBox(
                   height: 16,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const CustomFormField(
-                      title: 'Password',
-                      obscureText: true,
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'Forgot Password',
-                        style: blueTextStyle,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    CustomFilledButton(
-                      title: 'Sign In',
-                      onPressed: () {},
-                    )
-                  ],
+                const CustomFormField(
+                  title: 'Password',
+                  obscureText: true,
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomFilledButton(
+                  title: 'Continue',
+                  onPressed: () {},
                 )
               ],
             ),
@@ -77,9 +67,9 @@ class SignInPage extends StatelessWidget {
             height: 30,
           ),
           CustomTextButton(
-            title: 'Create New Account',
+            title: 'Sign In',
             onPressed: () {
-              Navigator.pushNamed(context, '/sign-up');
+              Navigator.pushNamed(context, '/sign-in');
             },
           )
         ],
