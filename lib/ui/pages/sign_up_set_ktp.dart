@@ -1,11 +1,10 @@
-import 'package:bank_sha/ui/widgets/forms.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/theme.dart';
 import '../widgets/button.dart';
 
-class SignUpSetProfilePage extends StatelessWidget {
-  const SignUpSetProfilePage({super.key});
+class SignUpSetKtpPage extends StatelessWidget {
+  const SignUpSetKtpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class SignUpSetProfilePage extends StatelessWidget {
             height: 100,
           ),
           Text(
-            'Join Us to Unlock\nYour Growth',
+            'Verify Your\nAccount',
             style: blackTextStyle.copyWith(fontSize: 20, fontWeight: semibold),
           ),
           const SizedBox(
@@ -60,31 +59,31 @@ class SignUpSetProfilePage extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  'Az Zahra',
+                  'Passport/ID Card',
                   style: blackTextStyle.copyWith(
                     fontSize: 18,
                     fontWeight: medium,
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
-                ),
-                const CustomFormField(
-                  title: 'Set PIN (6 digit number)',
-                  obscureText: true,
-                ),
-                const SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 CustomFilledButton(
                   title: 'Continue',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/sign-up-set-ktp');
-                  },
+                  onPressed: () {},
                 )
               ],
             ),
           ),
+          const SizedBox(
+            height: 30,
+          ),
+          CustomTextButton(
+            title: 'Skip for Now',
+            onPressed: () {
+              Navigator.pushNamed(context, '/sign-in');
+            },
+          )
         ],
       ),
     );
